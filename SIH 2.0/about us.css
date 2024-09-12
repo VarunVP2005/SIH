@@ -1,0 +1,243 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #bae8e8;
+  height: 110px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
+}
+
+/* Logo on the Left */
+.navbar .logo {
+  flex: 1; /* Takes up available space */
+  max-width: 150px; /* Adjust max width as needed */
+}
+
+/* Navigation Links on the Right */
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px; /* Space between nav items */
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Report Button Style */
+.report-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.report-button:hover {
+  background-color: #0056b3;
+}
+
+/* Flexbox Adjustment for Right Alignment */
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px; /* Space between links and button */
+  margin-right: 30px;
+}
+
+.report-button {
+  margin-left: 20px; /* Space between last nav item and button */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .nav-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .report-button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* About-us */
+
+
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-us h2 {
+    font-size: 2.5em;
+    color: #3d3d7c;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro {
+    font-size: 1.2em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mission, .technology, .team, .vision {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission h3, .technology h3, .team h3, .vision h3 {
+    font-size: 1.8em;
+    color: #3d3d7c;
+}
+
+.mission p, .technology ul, .team p, .vision p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.technology ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+/* footer */
+
+.footer {
+    background-color: #bae8e8;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  .footer>h3
+  {
+    color:#3d00f5
+  }
+  
+  .footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footer-menu a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer-social {
+    margin: 20px 0;
+  }
+  
+  .social-icon {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    margin: 0 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .social-icon.instagram {
+    background-image: url("./img/icons8-instagram-48.png");
+  }
+  .social-icon.facebook {
+    background-image: url("./img/icons8-facebook-48.png");
+  }
+  .social-icon.twitter {
+    background-image: url("./img/icons8-twitterx-48.png");
+  }
+  .social-icon.linkedin {
+    background-image: url("./img/icons8-linkedin-48.png");
+  }
+  
+  .footer-copy {
+    font-size: 14px;
+  }
+  
+  .footer > h3 {
+    color: blue;
+  }
+  
+  /* Fade-In Animation */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

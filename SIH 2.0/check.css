@@ -1,0 +1,352 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #bae8e8;
+  height: 110px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
+}
+
+/* Logo on the Left */
+.navbar .logo {
+  flex: 1; /* Takes up available space */
+  max-width: 150px; /* Adjust max width as needed */
+}
+
+/* Navigation Links on the Right */
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px; /* Space between nav items */
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Report Button Style */
+.report-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.report-button:hover {
+  background-color: #0056b3;
+}
+
+/* Flexbox Adjustment for Right Alignment */
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px; /* Space between links and button */
+  margin-right: 30px;
+}
+
+.report-button {
+  margin-left: 20px; /* Space between last nav item and button */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .nav-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .report-button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+
+/* Main Container */
+.container {
+  padding: 20px;
+  padding-top: 150px; /* Adjusted padding to account for fixed navbar */
+  background-color: #f4f4f9;
+  padding: 80px;
+  margin-top: 20px;
+}
+
+/* Flexbox Wrapper for Content */
+.content-wrapper {
+  display: flex;
+  gap: 110px;
+  align-items: flex-start;
+}
+
+/* Common Styles for Left and Right Boxes */
+.box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 45%; /* Adjust max-width as needed */
+}
+
+/* Left Box: Why Use FakeTrace */
+.left-box h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.left-box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Right Box: Drop & Drag */
+.right-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200rem;
+  height: 29rem;
+}
+
+.right-box h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #007bff;
+  
+}
+
+.drag-area {
+  border: 2px dashed #ccc;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  height: 250px; /* Set a fixed height */
+  position: relative;
+}
+
+.drag-area .icon,
+.drag-area .header,
+.drag-area .support {
+  transition: opacity 0.3s ease;
+}
+
+.drag-area .icon {
+  font-size: 3rem;
+  color: #007bff;
+}
+
+.drag-area .header {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.drag-area .button {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.drag-area:hover {
+  border-color: #007bff;
+}
+
+.drag-area .support {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* Preview Area Inside Drop Area */
+#preview-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Adds space between preview items */
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevents overflow outside the drop area */
+  position: absolute; /* Positioned inside the drag area */
+  top: 0;
+  left: 0;
+  
+}
+
+#preview-area img,
+#preview-area video,
+#preview-area audio {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.dbutton{
+background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+
+  .dbutton:hover{
+    background-color: green;
+  }
+
+/* Button Styles */
+.download {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download:hover {
+  background-color: #0056b3;
+}
+
+
+/* How It Works Section */
+.steps-section {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.steps-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+
+.step {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 30%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-10px);
+}
+
+.step-icon {
+  font-size: 3rem;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.step-description {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

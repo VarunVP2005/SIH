@@ -1,0 +1,169 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #bae8e8;
+    height: 110px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
+  }
+  
+  /* Logo on the Left */
+  .navbar .logo {
+    flex: 1; /* Takes up available space */
+    max-width: 150px; /* Adjust max width as needed */
+  }
+  
+  /* Navigation Links on the Right */
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between nav items */
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #007bff;
+  }
+  
+  /* Report Button Style */
+  .report-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .report-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Flexbox Adjustment for Right Alignment */
+  .nav-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px; /* Space between links and button */
+    margin-right: 30px;
+  }
+  
+  .report-button {
+    margin-left: 20px; /* Space between last nav item and button */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 10px 20px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+  
+    .nav-container {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .report-button {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+  
+/* detection techniques */
+
+.detection-techniques {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.detection-techniques h2 {
+    font-size: 2em;
+    color: #3d3d7c;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.tech-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    color: #3d3d7c;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

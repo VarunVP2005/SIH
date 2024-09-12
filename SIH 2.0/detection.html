@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FakeTrace</title>
+    <link rel="stylesheet" href="./detection.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/icon.png" /> 
+  </head>
+  <body>
+    <div class="navbar">
+        <div class="logo">
+          <a href="./home.html"><img src="./img/logo-removebg-preview.png" alt="Logo" width="190px" height="105px"></a>
+          
+        </div>
+        <div class="nav-container">
+          <ul class="nav-links">
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="#detection">Detection Technique</a></li>
+            <li><a href="./about us.html">About Us</a></li>
+          </ul>
+          <button class="report-button">Report</button>
+        </div>
+      </div>
+
+      <main>
+        <section class="detection-techniques">
+            <h2>Detection Techniques</h2>
+            <p class="subtitle">Technological approaches to identify and mitigate the impact of deep fakes.</p>
+            
+            <div class="tech-cards">
+                <div class="card">
+                    <h3>Convolutional Neural Networks (CNNs)</h3>
+                    <p>CNNs can detect inconsistencies in facial features, expressions, and movements, as well as analyze video frames for unnatural transitions.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>RNNs and LSTMs</h3>
+                    <p>These networks analyze the sequence of video frames to detect temporal anomalies and inconsistencies indicative of deep fakes.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Capsule Networks</h3>
+                    <p>Capsule networks identify discrepancies in facial pose and texture to detect deep fakes.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Adversarial Training</h3>
+                    <p>Using GANs to generate deep fakes and simultaneously training models to detect them improves the robustness of detection algorithms.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Audio-Visual Inconsistencies</h3>
+                    <p>Combining audio and visual analysis helps detect deep fakes by identifying mismatches between lip movements and speech.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Blockchain Technology</h3>
+                    <p>Blockchain creates immutable records of media, ensuring its authenticity by providing a verifiable chain of custody.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
